@@ -8,7 +8,7 @@
 
 // change the post type labels for the Competition cpt
 function nk_custom_post_type_label_woo( $args ){
-  $labels = nk_get_cpt_labels( __( 'Tractor Part', 'shiny-octo-journey' ), __( 'Tractor Parts', 'shiny-octo-journey' ));
+  $labels = nk_get_cpt_labels( __( 'Polytunnel', 'shiny-octo-journey' ), __( 'Polytunnels', 'shiny-octo-journey' ));
   $args['labels'] = $labels;
   return $args;
 }
@@ -32,32 +32,6 @@ function nk_get_cpt_labels($single,$plural){
     'parent' => 'Parent '.$single
  );
    return $arr;
-}
-
-// custom data tab
-function parts_custom_tab( $tabs ) {
-	$tabs['parts_custom_tab'] = array(
-		'title'    => __( 'Parts Information', 'shiny-octo-journey' ),
-		'callback' => 'parts_custom_tab_content', // the function name, which is on line 15
-		'priority' => 50,
-	);
-	return $tabs;
-}
-add_filter( 'woocommerce_product_tabs', 'parts_custom_tab' );
-
-// custom data tab content
-function parts_custom_tab_content( $slug, $tab ) {
-  
-  global $product;
-  
-  $context['post'] = Timber::get_post();
-  $product = wc_get_product( $context['post']->ID );
-  $context['product'] = $product;
-  
-  wp_reset_postdata();
-  
-  Timber::render( 'data-tab.twig', $context );
-  
 }
   
 // remove woo scripts and styles selectively

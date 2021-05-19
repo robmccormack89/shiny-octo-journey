@@ -48,7 +48,7 @@ class Shiny_Octo_Journey extends Timber\Site
   }
   
   // this makes custom taxonomy (status) work with archive.php->archive.twig templates with pre_get_post filter added to class construct above
-  public function add_custom_types_to_tax( $query )
+  public function add_custom_types_to_tax($query)
   {
     if( is_category() || is_tax('tractor_type') || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
       // Get all your post types
@@ -109,143 +109,12 @@ class Shiny_Octo_Journey extends Timber\Site
   		'show_in_rest'          => false,
   	);
   	register_post_type( 'slide', $args_one );
-
-    
-  	$labels_tractors = array(
-  		'name'                  => _x( 'Tractors', 'Post Type General Name', 'shiny-octo-journey' ),
-  		'singular_name'         => _x( 'Tractor', 'Post Type Singular Name', 'shiny-octo-journey' ),
-  		'menu_name'             => __( 'Tractors', 'shiny-octo-journey' ),
-  		'name_admin_bar'        => __( 'Tractor', 'shiny-octo-journey' ),
-  		'archives'              => __( 'Tractor Archives', 'shiny-octo-journey' ),
-  		'attributes'            => __( 'Tractor Attributes', 'shiny-octo-journey' ),
-  		'parent_item_colon'     => __( 'Parent Tractor:', 'shiny-octo-journey' ),
-  		'all_items'             => __( 'All Tractors', 'shiny-octo-journey' ),
-  		'add_new_item'          => __( 'Add New Tractor', 'shiny-octo-journey' ),
-  		'add_new'               => __( 'Add New', 'shiny-octo-journey' ),
-  		'new_item'              => __( 'New Tractor', 'shiny-octo-journey' ),
-  		'edit_item'             => __( 'Edit Tractor', 'shiny-octo-journey' ),
-  		'update_item'           => __( 'Update Tractor', 'shiny-octo-journey' ),
-  		'view_item'             => __( 'View Tractor', 'shiny-octo-journey' ),
-  		'view_items'            => __( 'View Tractors', 'shiny-octo-journey' ),
-  		'search_items'          => __( 'Search Tractor', 'shiny-octo-journey' ),
-  		'not_found'             => __( 'Not found', 'shiny-octo-journey' ),
-  		'not_found_in_trash'    => __( 'Not found in Trash', 'shiny-octo-journey' ),
-  		'featured_image'        => __( 'Featured Image', 'shiny-octo-journey' ),
-  		'set_featured_image'    => __( 'Set featured image', 'shiny-octo-journey' ),
-  		'remove_featured_image' => __( 'Remove featured image', 'shiny-octo-journey' ),
-  		'use_featured_image'    => __( 'Use as featured image', 'shiny-octo-journey' ),
-  		'insert_into_item'      => __( 'Insert into item', 'shiny-octo-journey' ),
-  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'shiny-octo-journey' ),
-  		'items_list'            => __( 'Tractors list', 'shiny-octo-journey' ),
-  		'items_list_navigation' => __( 'Items list navigation', 'shiny-octo-journey' ),
-  		'filter_items_list'     => __( 'Filter items list', 'shiny-octo-journey' ),
-  	);
-  	$args_tractors = array(
-  		'label'                 => __( 'Tractor', 'shiny-octo-journey' ),
-  		'description'           => __( 'Tractors for Sale/Breaking', 'shiny-octo-journey' ),
-  		'labels'                => $labels_tractors,
-  		'supports'              => array( 'title', 'excerpt', 'editor', 'thumbnail', 'revisions' ),
-  		'hierarchical'          => false,
-  		'public'                => true,
-  		'show_ui'               => true,
-  		'show_in_menu'          => true,
-  		'menu_position'         => 5,
-  		'show_in_admin_bar'     => true,
-  		'show_in_nav_menus'     => true,
-  		'can_export'            => true,
-  		'has_archive'           => 'tractors-for-sale-breaking',
-  		'exclude_from_search'   => false,
-  		'publicly_queryable'    => true,
-  		'capability_type'       => 'page',
-  	);
-  	register_post_type( 'tractor', $args_tractors );
-    
     
   }
 
   public function register_taxonomies()
   {
-  	$labels_series = array(
-  		'name'                       => _x( 'Series/Models', 'Taxonomy General Name', 'shiny-octo-journey' ),
-  		'singular_name'              => _x( 'Series/Model', 'Taxonomy Singular Name', 'shiny-octo-journey' ),
-  		'menu_name'                  => __( 'Series/Models', 'shiny-octo-journey' ),
-  		'all_items'                  => __( 'All Series/Models', 'shiny-octo-journey' ),
-  		'parent_item'                => __( 'Parent (Series)', 'shiny-octo-journey' ),
-  		'parent_item_colon'          => __( 'Parent (Series):', 'shiny-octo-journey' ),
-  		'new_item_name'              => __( 'New Series/Model Name', 'shiny-octo-journey' ),
-  		'add_new_item'               => __( 'Add New Series/Model', 'shiny-octo-journey' ),
-  		'edit_item'                  => __( 'Edit Series/Model', 'shiny-octo-journey' ),
-  		'update_item'                => __( 'Update Series/Model', 'shiny-octo-journey' ),
-  		'view_item'                  => __( 'View Series/Model', 'shiny-octo-journey' ),
-  		'separate_items_with_commas' => __( 'Separate items with commas', 'shiny-octo-journey' ),
-  		'add_or_remove_items'        => __( 'Add or remove Series/Model', 'shiny-octo-journey' ),
-  		'choose_from_most_used'      => __( 'Choose from the most used', 'shiny-octo-journey' ),
-  		'popular_items'              => __( 'Popular Series/Models', 'shiny-octo-journey' ),
-  		'search_items'               => __( 'Search Series/Models', 'shiny-octo-journey' ),
-  		'not_found'                  => __( 'Not Found', 'shiny-octo-journey' ),
-  		'no_terms'                   => __( 'No items', 'shiny-octo-journey' ),
-  		'items_list'                 => __( 'Items list', 'shiny-octo-journey' ),
-  		'items_list_navigation'      => __( 'Items list navigation', 'shiny-octo-journey' ),
-  	);
-  	$rewrite_series = array(
-  		'slug'                       => 'product-series-model',
-  		'with_front'                 => true,
-  		'hierarchical'               => true,
-  	);
-  	$args_series = array(
-  		'labels'                     => $labels_series,
-  		'hierarchical'               => true,
-  		'public'                     => true,
-  		'show_ui'                    => true,
-  		'show_admin_column'          => true,
-  		'show_in_nav_menus'          => true,
-  		'show_tagcloud'              => true,
-  		'rewrite'                    => $rewrite_series,
-  		'update_count_callback'      => 'count_product_series',
-  		'show_in_rest'               => true,
-      'update_count_callback' => '_update_post_term_count',
-  	);
-  	register_taxonomy( 'product_series', array( 'product' ), $args_series );
-    
-  	$labels_type = array(
-  		'name'                       => _x( 'Tractor Types', 'Taxonomy General Name', 'shiny-octo-journey' ),
-  		'singular_name'              => _x( 'Tractor Type', 'Taxonomy Singular Name', 'shiny-octo-journey' ),
-  		'menu_name'                  => __( 'Tractor Type', 'shiny-octo-journey' ),
-  		'all_items'                  => __( 'All Tractor Types', 'shiny-octo-journey' ),
-  		'parent_item'                => __( 'Parent Tractor Type', 'shiny-octo-journey' ),
-  		'parent_item_colon'          => __( 'Parent Tractor Type:', 'shiny-octo-journey' ),
-  		'new_item_name'              => __( 'New Tractor Type Name', 'shiny-octo-journey' ),
-  		'add_new_item'               => __( 'Add New Tractor Type', 'shiny-octo-journey' ),
-  		'edit_item'                  => __( 'Edit Tractor Type', 'shiny-octo-journey' ),
-  		'update_item'                => __( 'Update Tractor Type', 'shiny-octo-journey' ),
-  		'view_item'                  => __( 'View Tractor Type', 'shiny-octo-journey' ),
-  		'separate_items_with_commas' => __( 'Separate items with commas', 'shiny-octo-journey' ),
-  		'add_or_remove_items'        => __( 'Add or remove Tractor Types', 'shiny-octo-journey' ),
-  		'choose_from_most_used'      => __( 'Choose from the most used', 'shiny-octo-journey' ),
-  		'popular_items'              => __( 'Popular Items', 'shiny-octo-journey' ),
-  		'search_items'               => __( 'Search Items', 'shiny-octo-journey' ),
-  		'not_found'                  => __( 'Not Found', 'shiny-octo-journey' ),
-  		'no_terms'                   => __( 'No items', 'shiny-octo-journey' ),
-  		'items_list'                 => __( 'Items list', 'shiny-octo-journey' ),
-  		'items_list_navigation'      => __( 'Items list navigation', 'shiny-octo-journey' ),
-  	);
-  	$rewrite_type = array(
-  		'slug'                       => 'tractor-type',
-  		'with_front'                 => true,
-  		'hierarchical'               => false,
-  	);
-  	$args_type = array(
-  		'labels'                     => $labels_type,
-  		'hierarchical'               => true,
-  		'public'                     => true,
-  		'show_ui'                    => true,
-  		'show_admin_column'          => true,
-  		'show_in_nav_menus'          => true,
-  		'show_tagcloud'              => true,
-  		'rewrite'                    => $rewrite_type,
-  	);
-  	register_taxonomy( 'tractor_type', array( 'tractor' ), $args_type );
-    
+    // 
   }
 
   public function register_widget_areas()
