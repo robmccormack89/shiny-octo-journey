@@ -2,7 +2,7 @@
 /**
  * Timber theme class & other functions for Twig.
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
 
 // Define paths to Twig templates
@@ -25,8 +25,8 @@ Timber::$dirname = array(
 // set the $autoescape value
 Timber::$autoescape = false;
 
-// Define Vigilant_Octo_Telegram Child Class
-class Vigilant_Octo_Telegram extends Timber\Site
+// Define Shiny_Octo_Journey Child Class
+class Shiny_Octo_Journey extends Timber\Site
 {
   public function __construct()
   {
@@ -34,12 +34,12 @@ class Vigilant_Octo_Telegram extends Timber\Site
     add_filter('timber_context', array( $this, 'add_to_context' ));
     add_filter('get_twig', array( $this, 'add_to_twig' ));
     add_action('after_setup_theme', array( $this, 'theme_supports' ));
-    add_action('wp_enqueue_scripts', array( $this, 'vigilant_octo_telegram_enqueue_assets'));
-    add_action('widgets_init', array( $this, 'vigilant_octo_telegram_custom_uikit_widgets_init'));
+    add_action('wp_enqueue_scripts', array( $this, 'shiny_octo_journey_enqueue_assets'));
+    add_action('widgets_init', array( $this, 'shiny_octo_journey_custom_uikit_widgets_init'));
     add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
     add_filter( 'timber/context', array( $this, 'add_to_context' ) );
     add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
-    add_filter( 'query_vars', array( $this, 'vigilant_octo_telegram_gridlist_query_vars_filter'));
+    add_filter( 'query_vars', array( $this, 'shiny_octo_journey_gridlist_query_vars_filter'));
     add_action( 'init', array( $this, 'register_post_types' ) );
     add_action( 'init', array( $this, 'register_taxonomies' ) );
     add_action('init', array( $this, 'register_widget_areas' ));
@@ -61,37 +61,37 @@ class Vigilant_Octo_Telegram extends Timber\Site
   public function register_post_types()
   {
     $labels_one = array(
-  		'name'                  => _x( 'Banner Slides', 'Post Type General Name', 'vigilant-octo-telegram' ),
-  		'singular_name'         => _x( 'Banner Slide', 'Post Type Singular Name', 'vigilant-octo-telegram' ),
-  		'menu_name'             => __( 'Home Banner Slides', 'vigilant-octo-telegram' ),
-  		'name_admin_bar'        => __( 'Banner Slide', 'vigilant-octo-telegram' ),
-  		'archives'              => __( 'Banner Slide Archives', 'vigilant-octo-telegram' ),
-  		'attributes'            => __( 'Item Attributes', 'vigilant-octo-telegram' ),
-  		'parent_item_colon'     => __( 'Parent Item:', 'vigilant-octo-telegram' ),
-  		'all_items'             => __( 'All Slides', 'vigilant-octo-telegram' ),
-  		'add_new_item'          => __( 'Add New Item', 'vigilant-octo-telegram' ),
-  		'add_new'               => __( 'Add New', 'vigilant-octo-telegram' ),
-  		'new_item'              => __( 'New Item', 'vigilant-octo-telegram' ),
-  		'edit_item'             => __( 'Edit Item', 'vigilant-octo-telegram' ),
-  		'update_item'           => __( 'Update Item', 'vigilant-octo-telegram' ),
-  		'view_item'             => __( 'View Item', 'vigilant-octo-telegram' ),
-  		'view_items'            => __( 'View Items', 'vigilant-octo-telegram' ),
-  		'search_items'          => __( 'Search Item', 'vigilant-octo-telegram' ),
-  		'not_found'             => __( 'Not found', 'vigilant-octo-telegram' ),
-  		'not_found_in_trash'    => __( 'Not found in Trash', 'vigilant-octo-telegram' ),
-  		'featured_image'        => __( 'Featured Image', 'vigilant-octo-telegram' ),
-  		'set_featured_image'    => __( 'Set featured image', 'vigilant-octo-telegram' ),
-  		'remove_featured_image' => __( 'Remove featured image', 'vigilant-octo-telegram' ),
-  		'use_featured_image'    => __( 'Use as featured image', 'vigilant-octo-telegram' ),
-  		'insert_into_item'      => __( 'Insert into item', 'vigilant-octo-telegram' ),
-  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'vigilant-octo-telegram' ),
-  		'items_list'            => __( 'Items list', 'vigilant-octo-telegram' ),
-  		'items_list_navigation' => __( 'Items list navigation', 'vigilant-octo-telegram' ),
-  		'filter_items_list'     => __( 'Filter items list', 'vigilant-octo-telegram' ),
+  		'name'                  => _x( 'Banner Slides', 'Post Type General Name', 'shiny-octo-journey' ),
+  		'singular_name'         => _x( 'Banner Slide', 'Post Type Singular Name', 'shiny-octo-journey' ),
+  		'menu_name'             => __( 'Home Banner Slides', 'shiny-octo-journey' ),
+  		'name_admin_bar'        => __( 'Banner Slide', 'shiny-octo-journey' ),
+  		'archives'              => __( 'Banner Slide Archives', 'shiny-octo-journey' ),
+  		'attributes'            => __( 'Item Attributes', 'shiny-octo-journey' ),
+  		'parent_item_colon'     => __( 'Parent Item:', 'shiny-octo-journey' ),
+  		'all_items'             => __( 'All Slides', 'shiny-octo-journey' ),
+  		'add_new_item'          => __( 'Add New Item', 'shiny-octo-journey' ),
+  		'add_new'               => __( 'Add New', 'shiny-octo-journey' ),
+  		'new_item'              => __( 'New Item', 'shiny-octo-journey' ),
+  		'edit_item'             => __( 'Edit Item', 'shiny-octo-journey' ),
+  		'update_item'           => __( 'Update Item', 'shiny-octo-journey' ),
+  		'view_item'             => __( 'View Item', 'shiny-octo-journey' ),
+  		'view_items'            => __( 'View Items', 'shiny-octo-journey' ),
+  		'search_items'          => __( 'Search Item', 'shiny-octo-journey' ),
+  		'not_found'             => __( 'Not found', 'shiny-octo-journey' ),
+  		'not_found_in_trash'    => __( 'Not found in Trash', 'shiny-octo-journey' ),
+  		'featured_image'        => __( 'Featured Image', 'shiny-octo-journey' ),
+  		'set_featured_image'    => __( 'Set featured image', 'shiny-octo-journey' ),
+  		'remove_featured_image' => __( 'Remove featured image', 'shiny-octo-journey' ),
+  		'use_featured_image'    => __( 'Use as featured image', 'shiny-octo-journey' ),
+  		'insert_into_item'      => __( 'Insert into item', 'shiny-octo-journey' ),
+  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'shiny-octo-journey' ),
+  		'items_list'            => __( 'Items list', 'shiny-octo-journey' ),
+  		'items_list_navigation' => __( 'Items list navigation', 'shiny-octo-journey' ),
+  		'filter_items_list'     => __( 'Filter items list', 'shiny-octo-journey' ),
   	);
   	$args_one = array(
-  		'label'                 => __( 'Banner Slide', 'vigilant-octo-telegram' ),
-  		'description'           => __( 'Banner Slides for the Home Page Banner', 'vigilant-octo-telegram' ),
+  		'label'                 => __( 'Banner Slide', 'shiny-octo-journey' ),
+  		'description'           => __( 'Banner Slides for the Home Page Banner', 'shiny-octo-journey' ),
   		'labels'                => $labels_one,
   		'supports'              => array( 'title', 'thumbnail' ),
   		'hierarchical'          => false,
@@ -112,37 +112,37 @@ class Vigilant_Octo_Telegram extends Timber\Site
 
     
   	$labels_tractors = array(
-  		'name'                  => _x( 'Tractors', 'Post Type General Name', 'vigilant-octo-telegram' ),
-  		'singular_name'         => _x( 'Tractor', 'Post Type Singular Name', 'vigilant-octo-telegram' ),
-  		'menu_name'             => __( 'Tractors', 'vigilant-octo-telegram' ),
-  		'name_admin_bar'        => __( 'Tractor', 'vigilant-octo-telegram' ),
-  		'archives'              => __( 'Tractor Archives', 'vigilant-octo-telegram' ),
-  		'attributes'            => __( 'Tractor Attributes', 'vigilant-octo-telegram' ),
-  		'parent_item_colon'     => __( 'Parent Tractor:', 'vigilant-octo-telegram' ),
-  		'all_items'             => __( 'All Tractors', 'vigilant-octo-telegram' ),
-  		'add_new_item'          => __( 'Add New Tractor', 'vigilant-octo-telegram' ),
-  		'add_new'               => __( 'Add New', 'vigilant-octo-telegram' ),
-  		'new_item'              => __( 'New Tractor', 'vigilant-octo-telegram' ),
-  		'edit_item'             => __( 'Edit Tractor', 'vigilant-octo-telegram' ),
-  		'update_item'           => __( 'Update Tractor', 'vigilant-octo-telegram' ),
-  		'view_item'             => __( 'View Tractor', 'vigilant-octo-telegram' ),
-  		'view_items'            => __( 'View Tractors', 'vigilant-octo-telegram' ),
-  		'search_items'          => __( 'Search Tractor', 'vigilant-octo-telegram' ),
-  		'not_found'             => __( 'Not found', 'vigilant-octo-telegram' ),
-  		'not_found_in_trash'    => __( 'Not found in Trash', 'vigilant-octo-telegram' ),
-  		'featured_image'        => __( 'Featured Image', 'vigilant-octo-telegram' ),
-  		'set_featured_image'    => __( 'Set featured image', 'vigilant-octo-telegram' ),
-  		'remove_featured_image' => __( 'Remove featured image', 'vigilant-octo-telegram' ),
-  		'use_featured_image'    => __( 'Use as featured image', 'vigilant-octo-telegram' ),
-  		'insert_into_item'      => __( 'Insert into item', 'vigilant-octo-telegram' ),
-  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'vigilant-octo-telegram' ),
-  		'items_list'            => __( 'Tractors list', 'vigilant-octo-telegram' ),
-  		'items_list_navigation' => __( 'Items list navigation', 'vigilant-octo-telegram' ),
-  		'filter_items_list'     => __( 'Filter items list', 'vigilant-octo-telegram' ),
+  		'name'                  => _x( 'Tractors', 'Post Type General Name', 'shiny-octo-journey' ),
+  		'singular_name'         => _x( 'Tractor', 'Post Type Singular Name', 'shiny-octo-journey' ),
+  		'menu_name'             => __( 'Tractors', 'shiny-octo-journey' ),
+  		'name_admin_bar'        => __( 'Tractor', 'shiny-octo-journey' ),
+  		'archives'              => __( 'Tractor Archives', 'shiny-octo-journey' ),
+  		'attributes'            => __( 'Tractor Attributes', 'shiny-octo-journey' ),
+  		'parent_item_colon'     => __( 'Parent Tractor:', 'shiny-octo-journey' ),
+  		'all_items'             => __( 'All Tractors', 'shiny-octo-journey' ),
+  		'add_new_item'          => __( 'Add New Tractor', 'shiny-octo-journey' ),
+  		'add_new'               => __( 'Add New', 'shiny-octo-journey' ),
+  		'new_item'              => __( 'New Tractor', 'shiny-octo-journey' ),
+  		'edit_item'             => __( 'Edit Tractor', 'shiny-octo-journey' ),
+  		'update_item'           => __( 'Update Tractor', 'shiny-octo-journey' ),
+  		'view_item'             => __( 'View Tractor', 'shiny-octo-journey' ),
+  		'view_items'            => __( 'View Tractors', 'shiny-octo-journey' ),
+  		'search_items'          => __( 'Search Tractor', 'shiny-octo-journey' ),
+  		'not_found'             => __( 'Not found', 'shiny-octo-journey' ),
+  		'not_found_in_trash'    => __( 'Not found in Trash', 'shiny-octo-journey' ),
+  		'featured_image'        => __( 'Featured Image', 'shiny-octo-journey' ),
+  		'set_featured_image'    => __( 'Set featured image', 'shiny-octo-journey' ),
+  		'remove_featured_image' => __( 'Remove featured image', 'shiny-octo-journey' ),
+  		'use_featured_image'    => __( 'Use as featured image', 'shiny-octo-journey' ),
+  		'insert_into_item'      => __( 'Insert into item', 'shiny-octo-journey' ),
+  		'uploaded_to_this_item' => __( 'Uploaded to this item', 'shiny-octo-journey' ),
+  		'items_list'            => __( 'Tractors list', 'shiny-octo-journey' ),
+  		'items_list_navigation' => __( 'Items list navigation', 'shiny-octo-journey' ),
+  		'filter_items_list'     => __( 'Filter items list', 'shiny-octo-journey' ),
   	);
   	$args_tractors = array(
-  		'label'                 => __( 'Tractor', 'vigilant-octo-telegram' ),
-  		'description'           => __( 'Tractors for Sale/Breaking', 'vigilant-octo-telegram' ),
+  		'label'                 => __( 'Tractor', 'shiny-octo-journey' ),
+  		'description'           => __( 'Tractors for Sale/Breaking', 'shiny-octo-journey' ),
   		'labels'                => $labels_tractors,
   		'supports'              => array( 'title', 'excerpt', 'editor', 'thumbnail', 'revisions' ),
   		'hierarchical'          => false,
@@ -166,26 +166,26 @@ class Vigilant_Octo_Telegram extends Timber\Site
   public function register_taxonomies()
   {
   	$labels_series = array(
-  		'name'                       => _x( 'Series/Models', 'Taxonomy General Name', 'vigilant-octo-telegram' ),
-  		'singular_name'              => _x( 'Series/Model', 'Taxonomy Singular Name', 'vigilant-octo-telegram' ),
-  		'menu_name'                  => __( 'Series/Models', 'vigilant-octo-telegram' ),
-  		'all_items'                  => __( 'All Series/Models', 'vigilant-octo-telegram' ),
-  		'parent_item'                => __( 'Parent (Series)', 'vigilant-octo-telegram' ),
-  		'parent_item_colon'          => __( 'Parent (Series):', 'vigilant-octo-telegram' ),
-  		'new_item_name'              => __( 'New Series/Model Name', 'vigilant-octo-telegram' ),
-  		'add_new_item'               => __( 'Add New Series/Model', 'vigilant-octo-telegram' ),
-  		'edit_item'                  => __( 'Edit Series/Model', 'vigilant-octo-telegram' ),
-  		'update_item'                => __( 'Update Series/Model', 'vigilant-octo-telegram' ),
-  		'view_item'                  => __( 'View Series/Model', 'vigilant-octo-telegram' ),
-  		'separate_items_with_commas' => __( 'Separate items with commas', 'vigilant-octo-telegram' ),
-  		'add_or_remove_items'        => __( 'Add or remove Series/Model', 'vigilant-octo-telegram' ),
-  		'choose_from_most_used'      => __( 'Choose from the most used', 'vigilant-octo-telegram' ),
-  		'popular_items'              => __( 'Popular Series/Models', 'vigilant-octo-telegram' ),
-  		'search_items'               => __( 'Search Series/Models', 'vigilant-octo-telegram' ),
-  		'not_found'                  => __( 'Not Found', 'vigilant-octo-telegram' ),
-  		'no_terms'                   => __( 'No items', 'vigilant-octo-telegram' ),
-  		'items_list'                 => __( 'Items list', 'vigilant-octo-telegram' ),
-  		'items_list_navigation'      => __( 'Items list navigation', 'vigilant-octo-telegram' ),
+  		'name'                       => _x( 'Series/Models', 'Taxonomy General Name', 'shiny-octo-journey' ),
+  		'singular_name'              => _x( 'Series/Model', 'Taxonomy Singular Name', 'shiny-octo-journey' ),
+  		'menu_name'                  => __( 'Series/Models', 'shiny-octo-journey' ),
+  		'all_items'                  => __( 'All Series/Models', 'shiny-octo-journey' ),
+  		'parent_item'                => __( 'Parent (Series)', 'shiny-octo-journey' ),
+  		'parent_item_colon'          => __( 'Parent (Series):', 'shiny-octo-journey' ),
+  		'new_item_name'              => __( 'New Series/Model Name', 'shiny-octo-journey' ),
+  		'add_new_item'               => __( 'Add New Series/Model', 'shiny-octo-journey' ),
+  		'edit_item'                  => __( 'Edit Series/Model', 'shiny-octo-journey' ),
+  		'update_item'                => __( 'Update Series/Model', 'shiny-octo-journey' ),
+  		'view_item'                  => __( 'View Series/Model', 'shiny-octo-journey' ),
+  		'separate_items_with_commas' => __( 'Separate items with commas', 'shiny-octo-journey' ),
+  		'add_or_remove_items'        => __( 'Add or remove Series/Model', 'shiny-octo-journey' ),
+  		'choose_from_most_used'      => __( 'Choose from the most used', 'shiny-octo-journey' ),
+  		'popular_items'              => __( 'Popular Series/Models', 'shiny-octo-journey' ),
+  		'search_items'               => __( 'Search Series/Models', 'shiny-octo-journey' ),
+  		'not_found'                  => __( 'Not Found', 'shiny-octo-journey' ),
+  		'no_terms'                   => __( 'No items', 'shiny-octo-journey' ),
+  		'items_list'                 => __( 'Items list', 'shiny-octo-journey' ),
+  		'items_list_navigation'      => __( 'Items list navigation', 'shiny-octo-journey' ),
   	);
   	$rewrite_series = array(
   		'slug'                       => 'product-series-model',
@@ -208,26 +208,26 @@ class Vigilant_Octo_Telegram extends Timber\Site
   	register_taxonomy( 'product_series', array( 'product' ), $args_series );
     
   	$labels_type = array(
-  		'name'                       => _x( 'Tractor Types', 'Taxonomy General Name', 'vigilant-octo-telegram' ),
-  		'singular_name'              => _x( 'Tractor Type', 'Taxonomy Singular Name', 'vigilant-octo-telegram' ),
-  		'menu_name'                  => __( 'Tractor Type', 'vigilant-octo-telegram' ),
-  		'all_items'                  => __( 'All Tractor Types', 'vigilant-octo-telegram' ),
-  		'parent_item'                => __( 'Parent Tractor Type', 'vigilant-octo-telegram' ),
-  		'parent_item_colon'          => __( 'Parent Tractor Type:', 'vigilant-octo-telegram' ),
-  		'new_item_name'              => __( 'New Tractor Type Name', 'vigilant-octo-telegram' ),
-  		'add_new_item'               => __( 'Add New Tractor Type', 'vigilant-octo-telegram' ),
-  		'edit_item'                  => __( 'Edit Tractor Type', 'vigilant-octo-telegram' ),
-  		'update_item'                => __( 'Update Tractor Type', 'vigilant-octo-telegram' ),
-  		'view_item'                  => __( 'View Tractor Type', 'vigilant-octo-telegram' ),
-  		'separate_items_with_commas' => __( 'Separate items with commas', 'vigilant-octo-telegram' ),
-  		'add_or_remove_items'        => __( 'Add or remove Tractor Types', 'vigilant-octo-telegram' ),
-  		'choose_from_most_used'      => __( 'Choose from the most used', 'vigilant-octo-telegram' ),
-  		'popular_items'              => __( 'Popular Items', 'vigilant-octo-telegram' ),
-  		'search_items'               => __( 'Search Items', 'vigilant-octo-telegram' ),
-  		'not_found'                  => __( 'Not Found', 'vigilant-octo-telegram' ),
-  		'no_terms'                   => __( 'No items', 'vigilant-octo-telegram' ),
-  		'items_list'                 => __( 'Items list', 'vigilant-octo-telegram' ),
-  		'items_list_navigation'      => __( 'Items list navigation', 'vigilant-octo-telegram' ),
+  		'name'                       => _x( 'Tractor Types', 'Taxonomy General Name', 'shiny-octo-journey' ),
+  		'singular_name'              => _x( 'Tractor Type', 'Taxonomy Singular Name', 'shiny-octo-journey' ),
+  		'menu_name'                  => __( 'Tractor Type', 'shiny-octo-journey' ),
+  		'all_items'                  => __( 'All Tractor Types', 'shiny-octo-journey' ),
+  		'parent_item'                => __( 'Parent Tractor Type', 'shiny-octo-journey' ),
+  		'parent_item_colon'          => __( 'Parent Tractor Type:', 'shiny-octo-journey' ),
+  		'new_item_name'              => __( 'New Tractor Type Name', 'shiny-octo-journey' ),
+  		'add_new_item'               => __( 'Add New Tractor Type', 'shiny-octo-journey' ),
+  		'edit_item'                  => __( 'Edit Tractor Type', 'shiny-octo-journey' ),
+  		'update_item'                => __( 'Update Tractor Type', 'shiny-octo-journey' ),
+  		'view_item'                  => __( 'View Tractor Type', 'shiny-octo-journey' ),
+  		'separate_items_with_commas' => __( 'Separate items with commas', 'shiny-octo-journey' ),
+  		'add_or_remove_items'        => __( 'Add or remove Tractor Types', 'shiny-octo-journey' ),
+  		'choose_from_most_used'      => __( 'Choose from the most used', 'shiny-octo-journey' ),
+  		'popular_items'              => __( 'Popular Items', 'shiny-octo-journey' ),
+  		'search_items'               => __( 'Search Items', 'shiny-octo-journey' ),
+  		'not_found'                  => __( 'Not Found', 'shiny-octo-journey' ),
+  		'no_terms'                   => __( 'No items', 'shiny-octo-journey' ),
+  		'items_list'                 => __( 'Items list', 'shiny-octo-journey' ),
+  		'items_list_navigation'      => __( 'Items list navigation', 'shiny-octo-journey' ),
   	);
   	$rewrite_type = array(
   		'slug'                       => 'tractor-type',
@@ -253,9 +253,9 @@ class Vigilant_Octo_Telegram extends Timber\Site
     // Register widget areas
     if (function_exists('register_sidebar')) {
       register_sidebar(array(
-        'name' => esc_html__('Footer Left Area', 'vigilant-octo-telegram'),
+        'name' => esc_html__('Footer Left Area', 'shiny-octo-journey'),
         'id' => 'sidebar-footer-left',
-        'description' => esc_html__('Main Footer Widget Area; works best with the current widget only.', 'vigilant-octo-telegram'),
+        'description' => esc_html__('Main Footer Widget Area; works best with the current widget only.', 'shiny-octo-journey'),
         'before_widget' => '',
         'after_widget' => '',
         'before_title' => '<span hidden>',
@@ -268,13 +268,13 @@ class Vigilant_Octo_Telegram extends Timber\Site
   {
     // This theme uses wp_nav_menu() in one locations.
     register_nav_menus(array(
-      'categories' => __('Categories Menu', 'vigilant-octo-telegram'),
-      'main_menu' => __('Main Menu', 'vigilant-octo-telegram'),
-      'mobile_menu' => __('Mobile Menu', 'vigilant-octo-telegram'),
-      'accessories_menu' => __('Accessories Menu', 'vigilant-octo-telegram'),
-      'parts_menu' => __('Parts Menu', 'vigilant-octo-telegram'),
-      'footer_nav_menu' => __('Footer Nav Menu', 'vigilant-octo-telegram'),
-      'footer_customers_menu' => __('Footer Customers Menu', 'vigilant-octo-telegram'),
+      'categories' => __('Categories Menu', 'shiny-octo-journey'),
+      'main_menu' => __('Main Menu', 'shiny-octo-journey'),
+      'mobile_menu' => __('Mobile Menu', 'shiny-octo-journey'),
+      'accessories_menu' => __('Accessories Menu', 'shiny-octo-journey'),
+      'parts_menu' => __('Parts Menu', 'shiny-octo-journey'),
+      'footer_nav_menu' => __('Footer Nav Menu', 'shiny-octo-journey'),
+      'footer_customers_menu' => __('Footer Customers Menu', 'shiny-octo-journey'),
     ));
   }
 
@@ -375,28 +375,28 @@ class Vigilant_Octo_Telegram extends Timber\Site
     add_theme_support( 'wc-product-gallery-lightbox' );
     add_theme_support( 'wc-product-gallery-slider' );
     // custom thumbnail sizes
-    add_image_size('vigilant-octo-telegram-featured-image-archive', 800, 300, true);
-    add_image_size('vigilant-octo-telegram-featured-image-single-post', 1200, 450, true);
-    add_image_size('vigilant-octo-telegram-product-main-image', 1200, 700, true);
-    add_image_size('vigilant-octo-telegram-cart-image', 80, 80, true);
+    add_image_size('shiny-octo-journey-featured-image-archive', 800, 300, true);
+    add_image_size('shiny-octo-journey-featured-image-single-post', 1200, 450, true);
+    add_image_size('shiny-octo-journey-product-main-image', 1200, 700, true);
+    add_image_size('shiny-octo-journey-cart-image', 80, 80, true);
     // stop the br tag madness in the content editor
     // remove_filter( 'the_content', 'wpautop' );
     // remove_filter( 'the_excerpt', 'wpautop' );
-    load_theme_textdomain('vigilant-octo-telegram', get_template_directory() . '/languages');
+    load_theme_textdomain('shiny-octo-journey', get_template_directory() . '/languages');
   }
   
   // add grid-list url paramater key
-  public function vigilant_octo_telegram_gridlist_query_vars_filter($vars)
+  public function shiny_octo_journey_gridlist_query_vars_filter($vars)
   {
     $vars[] .= 'grid_list';
     return $vars;
   }
   
-  public function vigilant_octo_telegram_enqueue_assets()
+  public function shiny_octo_journey_enqueue_assets()
   {
     // theme base scripts
     wp_enqueue_script(
-      'vigilant-octo-telegram',
+      'shiny-octo-journey',
       get_template_directory_uri() . '/assets/js/base.js',
       '',
       '',
@@ -454,22 +454,22 @@ class Vigilant_Octo_Telegram extends Timber\Site
     );
     // theme base css
     wp_enqueue_style(
-      'vigilant-octo-telegram',
+      'shiny-octo-journey',
       get_template_directory_uri() . '/assets/css/base.css'
     );
     // theme stylesheet
     wp_enqueue_style(
-      'vigilant-octo-telegram-styles', get_stylesheet_uri()
+      'shiny-octo-journey-styles', get_stylesheet_uri()
     );
     wp_enqueue_style(
-      'vigilant-octo-telegram-woo',
+      'shiny-octo-journey-woo',
       get_template_directory_uri() . '/assets/css/woo.css'
     );
   }
   
-  public function vigilant_octo_telegram_custom_uikit_widgets_init()
+  public function shiny_octo_journey_custom_uikit_widgets_init()
   {
-    register_widget("Vigilant_Octo_Telegram_Custom_UIKIT_Widget_Class");
+    register_widget("Shiny_Octo_Journey_Custom_UIKIT_Widget_Class");
   }
 
   public function add_to_twig($twig)
@@ -481,4 +481,4 @@ class Vigilant_Octo_Telegram extends Timber\Site
   
 }
 
-new Vigilant_Octo_Telegram();
+new Shiny_Octo_Journey();

@@ -3,12 +3,12 @@
 /**
 * Woo functions
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 // change the post type labels for the Competition cpt
 function nk_custom_post_type_label_woo( $args ){
-  $labels = nk_get_cpt_labels( __( 'Tractor Part', 'vigilant-octo-telegram' ), __( 'Tractor Parts', 'vigilant-octo-telegram' ));
+  $labels = nk_get_cpt_labels( __( 'Tractor Part', 'shiny-octo-journey' ), __( 'Tractor Parts', 'shiny-octo-journey' ));
   $args['labels'] = $labels;
   return $args;
 }
@@ -37,7 +37,7 @@ function nk_get_cpt_labels($single,$plural){
 // custom data tab
 function parts_custom_tab( $tabs ) {
 	$tabs['parts_custom_tab'] = array(
-		'title'    => __( 'Parts Information', 'vigilant-octo-telegram' ),
+		'title'    => __( 'Parts Information', 'shiny-octo-journey' ),
 		'callback' => 'parts_custom_tab_content', // the function name, which is on line 15
 		'priority' => 50,
 	);
@@ -96,7 +96,7 @@ add_action( 'cart_ajax_subtotal', 'cart_ajax_subtotal' );
 function custom_stock_quantity() {
   global $product; 
   $numleft  = $product->get_stock_quantity(); 
-  $instock_text  = __( 'in stock', 'vigilant-octo-telegram' );
+  $instock_text  = __( 'in stock', 'shiny-octo-journey' );
   if($numleft==0) {
      // out of stock
       echo "<span class='uk-text-danger'>0 ". $instock_text .".</span>"; 
@@ -119,7 +119,7 @@ function custom_store_notice () {
   $notice = get_option( 'woocommerce_demo_store_notice' ); 
 
   if ( empty( $notice ) ) { 
-    $notice = __( 'This is a demo store for testing purposes — no orders shall be fulfilled.', 'vigilant-octo-telegram' ); 
+    $notice = __( 'This is a demo store for testing purposes — no orders shall be fulfilled.', 'shiny-octo-journey' ); 
   } 
 
   echo apply_filters( 'woocommerce_demo_store', '<div class="woocommerce-store-notice demo_store"><div class="store-notice-wrap">' . wp_kses_post( $notice ) . ' <a href="#" class="woocommerce-store-notice__dismiss-link">' . esc_html__( 'Dismiss', 'woocommerce' ) . ' <i class="fas fa-times"></i></a></div></div>', $notice ); 

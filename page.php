@@ -2,7 +2,7 @@
 /**
 * The template for rendering pages
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 $context = Timber::context();

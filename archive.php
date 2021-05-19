@@ -4,7 +4,7 @@
 * In this theme, this template will function for: date, category, tag & post_type/taxonomy archives
 * Overwrites will exist for author & post_type->tractor; see author.php & archive-tractor.php
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 $context = Timber::context();

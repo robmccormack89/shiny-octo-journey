@@ -2,7 +2,7 @@
 /**
 * The Front Page template. Will appy where Reading Settings is Latest Posts or Static Page->Homepage
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 $context = Timber::context();

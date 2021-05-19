@@ -18,10 +18,10 @@
           <div class="top-search-bar uk-visible@l">
           	<form id="form_validate_search" class="form_search_main uk-width-1-1 uk-inline" role="search" method="get" action="{{site.url|e('esc_url')}}" accept-charset="utf-8" novalidate="novalidate">
           		<div class="uk-search uk-search-default uk-search-large">
-          			<a href="#" title="{{ __('Submit Search', 'vigilant-octo-telegram') }}" class="uk-search-icon-flip uk-icon uk-search-icon">
+          			<a href="#" title="{{ __('Submit Search', 'shiny-octo-journey') }}" class="uk-search-icon-flip uk-icon uk-search-icon">
           				<i class="fas fa-search fa-2x"></i>
           			</a>
-          			<input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search" value="" placeholder="{{ __('Start searching for parts...', 'vigilant-octo-telegram') }}" required="" autocomplete="off"
+          			<input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search" value="" placeholder="{{ __('Start searching for parts...', 'shiny-octo-journey') }}" required="" autocomplete="off"
                   aria-invalid="true">
           			<input type="hidden" name="post_type" value="product" />
           		</div>
@@ -35,25 +35,25 @@
             <li>
               <a href="{{shop_url|e('esc_url')}}">
                 <i class="fas fa-tractor fa-2x uk-margin-small-right"></i>
-                {{ __('Parts', 'vigilant-octo-telegram') }}
+                {{ __('Parts', 'shiny-octo-journey') }}
               </a>
             </li>
             <li>
               <a href="{{contact_page_link|e('esc_url')|default('#')}}">
                 <i class="far fa-envelope fa-2x uk-margin-small-right"></i>
-                {{ __('Contact', 'vigilant-octo-telegram') }}
+                {{ __('Contact', 'shiny-octo-journey') }}
               </a>
             </li>
             <li>
               <a href="{{dashboard_endpoint|e('esc_url')}}">
                 <i class="far fa-user fa-2x uk-margin-small-right"></i>
-                {% if is_user_logged_in %}{{ __('Account', 'vigilant-octo-telegram') }}{% else %}{{ __('Sign up/Login', 'vigilant-octo-telegram') }}{% endif %}
+                {% if is_user_logged_in %}{{ __('Account', 'shiny-octo-journey') }}{% else %}{{ __('Sign up/Login', 'shiny-octo-journey') }}{% endif %}
               </a>
             </li>
             <li class="uk-inline">
               <a href="#MiniCartModal" uk-toggle>
                 <i class="fas fa-shopping-cart fa-2x uk-margin-small-right"></i>
-                {{ __('Basket', 'vigilant-octo-telegram') }}
+                {{ __('Basket', 'shiny-octo-journey') }}
                 <span class="uk-margin-small-left">
                   {% do action('cart_ajax_result_count') %}
                   {% do action('cart_ajax_subtotal') %}
@@ -76,14 +76,14 @@
             
             <a class="uk-navbar-toggle uk-navbar-item uk-text-emphasis uk-padding-remove uk-text-bold uk-hidden@m" uk-toggle href="#mobile-offcanvas-nav">
               <i class="fas fa-bars fa-lg"></i>
-              <span class="uk-flex-last uk-margin-small-left">{{ __('Menu', 'vigilant-octo-telegram') }}</span>
+              <span class="uk-flex-last uk-margin-small-left">{{ __('Menu', 'shiny-octo-journey') }}</span>
             </a>
             
             {% if has_menu_main %}
               <ul class="uk-navbar-nav the-main-menu uk-visible@m">
 
                 <li class="uk-inline cats-menu-main" hidden>
-                  <a href="#" class="uk-h5 dont-underline uk-margin-remove">{{ __('Browse categories', 'vigilant-octo-telegram') }} <i class="fas fa-angle-down menu-dropicon uk-margin-small-left"></i></a>
+                  <a href="#" class="uk-h5 dont-underline uk-margin-remove">{{ __('Browse categories', 'shiny-octo-journey') }} <i class="fas fa-angle-down menu-dropicon uk-margin-small-left"></i></a>
                   <div uk-dropdown class="theme-border-top theme-border-left theme-border-right">
                     
                     {% if menu_cats %}
@@ -212,19 +212,19 @@
           <div class="">
             <a href="tel:{{company_phone_number|e('esc_html')}}" class="uk-h5 dont-underline uk-margin-remove">
               <i class="fas fa-phone-alt"></i>
-              <span class="uk-margin-small-left uk-visible@xl">{{ __('Call us on', 'vigilant-octo-telegram') }} <span class="uk-text-underline">{{company_phone_number|e('esc_html')}}</span></span>
+              <span class="uk-margin-small-left uk-visible@xl">{{ __('Call us on', 'shiny-octo-journey') }} <span class="uk-text-underline">{{company_phone_number|e('esc_html')}}</span></span>
             </a>
           </div>
           <div class="">
             <a href="mailto:{{display_email|e('esc_html')}}" class="uk-h5 dont-underline uk-margin-remove">
               <i class="far fa-envelope"></i>
-              <span class="uk-margin-small-left uk-visible@xl">{{ __('Email us at', 'vigilant-octo-telegram') }} <span class="uk-text-underline">{{display_email|e('esc_html')}}</span></span>
+              <span class="uk-margin-small-left uk-visible@xl">{{ __('Email us at', 'shiny-octo-journey') }} <span class="uk-text-underline">{{display_email|e('esc_html')}}</span></span>
             </a>
           </div>
           <div class="">
             <a href="{{facebook_link|e('esc_url')}}" target="_blank" class="uk-h5 dont-underline uk-margin-remove">
               <i class="fab fa-facebook-f"></i>
-              <span class="uk-margin-small-left uk-visible@xl">{{ __('Find us on', 'vigilant-octo-telegram') }} <span class="uk-text-underline">{{ __('Facebook', 'vigilant-octo-telegram') }}</span></span>
+              <span class="uk-margin-small-left uk-visible@xl">{{ __('Find us on', 'shiny-octo-journey') }} <span class="uk-text-underline">{{ __('Facebook', 'shiny-octo-journey') }}</span></span>
             </a>
           </div>
         </div>
@@ -240,10 +240,10 @@
         <div class="top-search-bar-mobile">
           <form id="form_validate_search_mobile" class="form_search_main uk-width-1-1 uk-inline" role="search" method="get" action="{{site.url|e('esc_url')}}" accept-charset="utf-8" novalidate="novalidate">
             <div class="uk-search uk-search-default uk-width-1-1">
-              <a href="#" title="{{ __('Submit Search', 'vigilant-octo-telegram') }}" class="uk-search-icon-flip uk-icon uk-search-icon">
+              <a href="#" title="{{ __('Submit Search', 'shiny-octo-journey') }}" class="uk-search-icon-flip uk-icon uk-search-icon">
                 <i class="fas fa-search fa-lg"></i>
               </a>
-              <input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search_mobile" value="" placeholder="{{ __('Start searching for parts...', 'vigilant-octo-telegram') }}" required="" autocomplete="off"
+              <input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search_mobile" value="" placeholder="{{ __('Start searching for parts...', 'shiny-octo-journey') }}" required="" autocomplete="off"
                 aria-invalid="true">
               <input type="hidden" name="post_type" value="product" />
             </div>
@@ -252,8 +252,8 @@
         </div>
         
         <ul class="uk-subnav uk-subnav-pill uk-text-center" uk-switcher>
-          <li><a href="#">{{ __('Menu', 'vigilant-octo-telegram') }}</a></li>
-          <li><a href="#">{{ __('Categories', 'vigilant-octo-telegram') }}</a></li>
+          <li><a href="#">{{ __('Menu', 'shiny-octo-journey') }}</a></li>
+          <li><a href="#">{{ __('Categories', 'shiny-octo-journey') }}</a></li>
         </ul>
         
         <ul class="uk-switcher">

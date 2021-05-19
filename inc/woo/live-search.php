@@ -2,7 +2,7 @@
 /**
  * Live Search
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
  
 // support 's' -> 'search_term' matching; for ajax_live_search

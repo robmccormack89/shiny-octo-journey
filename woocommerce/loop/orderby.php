@@ -46,4 +46,4 @@ if (isset($_GET['orderby'])) {
 	</li>
 <?php endforeach; ?>
 </ul>
-<a class="uk-link-text uk-text-primary uk-text-small filters-reset-link" data-link="<?php echo esc_url(remove_query_arg(array('orderby'))); ?>"><?php __( 'Reset', 'vigilant-octo-telegram' ) ?></a>
+<a class="uk-link-text uk-text-primary uk-text-small filters-reset-link" data-link="<?php echo esc_url(remove_query_arg(array('orderby'))); ?>"><?php __( 'Reset', 'shiny-octo-journey' ) ?></a>

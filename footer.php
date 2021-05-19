@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
 
  $timberContext = $GLOBALS['timberContext']; // @codingStandardsIgnoreFile

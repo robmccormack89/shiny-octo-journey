@@ -2,7 +2,7 @@
 /**
 * Shop Filters
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 // grid_list badge name
@@ -17,17 +17,17 @@ function gridlist_badge_name() {
 // orderby badge name
 function orderby_badge_name() {
 	if ($_GET['orderby'] == 'price') {
-    $name = __( 'Price: low to high', 'vigilant-octo-telegram' );
+    $name = __( 'Price: low to high', 'shiny-octo-journey' );
   } elseif ($_GET['orderby'] == 'price-desc') {
-    $name =  __( 'Price: high to low', 'vigilant-octo-telegram' );
+    $name =  __( 'Price: high to low', 'shiny-octo-journey' );
   } elseif ($_GET['orderby'] == 'menu_order') {
-    $name =  __( 'Default', 'vigilant-octo-telegram' );
+    $name =  __( 'Default', 'shiny-octo-journey' );
   } elseif ($_GET['orderby'] == 'popularity') {
-    $name =  __( 'Popularity', 'vigilant-octo-telegram' );
+    $name =  __( 'Popularity', 'shiny-octo-journey' );
   } elseif ($_GET['orderby'] == 'rating') {
-    $name =  __( 'Rating', 'vigilant-octo-telegram' );
+    $name =  __( 'Rating', 'shiny-octo-journey' );
   } elseif ($_GET['orderby'] == 'date') {
-    $name =  __( 'Latest', 'vigilant-octo-telegram' );
+    $name =  __( 'Latest', 'shiny-octo-journey' );
   }
   return $name;
 }

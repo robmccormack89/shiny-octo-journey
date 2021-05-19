@@ -1,3 +1,3 @@
-# Vigilant Octo Telegram
+# Shiny Octo Journey
 
 ---

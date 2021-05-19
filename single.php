@@ -2,7 +2,7 @@
 /**
 * The default template for displaying all single posts, including for cpts where a specific template is not present
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 $context = Timber::context();

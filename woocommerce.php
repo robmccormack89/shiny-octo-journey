@@ -2,7 +2,7 @@
 /**
  * The template for making woocommerce work with timber/twig. sets the templates & context for woo's archive & singular views
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
 
 // make sure timber is activated first

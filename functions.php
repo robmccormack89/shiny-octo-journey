@@ -1,15 +1,15 @@
 <?php
 /**
- * Vigilant_Octo_Telegram functions and definitions
+ * Shiny_Octo_Journey functions and definitions
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
  
 // stuff to say we need timber activated!! see TGM Plugin activation library for php
 require_once get_template_directory() . '/inc/lib/class-tgm-plugin-activation.php';
 
 // register the required plugins(Timber) see TGM Plugin activation library for php
-function vigilant_octo_telegram_register_required_plugins()
+function shiny_octo_journey_register_required_plugins()
 {
  $plugins = array(
    array(
@@ -37,7 +37,7 @@ function vigilant_octo_telegram_register_required_plugins()
  );
  tgmpa($plugins, $config);
 }
-add_action('tgmpa_register', 'vigilant_octo_telegram_register_required_plugins');
+add_action('tgmpa_register', 'shiny_octo_journey_register_required_plugins');
 
 // load Theme functions
 require get_template_directory() . '/inc/theme-functions.php';

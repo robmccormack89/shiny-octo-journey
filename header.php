@@ -2,7 +2,7 @@
 /**
  * The header for our theme
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
  
  $GLOBALS['timberContext'] = Timber::context();

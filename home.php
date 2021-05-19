@@ -2,7 +2,7 @@
 /**
 * The Blog Posts/Index template. Will appy where Reading Settings is Static Page->Posts page
 *
-* @package Vigilant_Octo_Telegram
+* @package Shiny_Octo_Journey
 */
 
 $context = Timber::context();

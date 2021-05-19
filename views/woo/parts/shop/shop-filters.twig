@@ -1,11 +1,11 @@
 <nav id="ProductFilters">
 
-  <h3 class="uk-h5">{{ __('Sorting', 'vigilant-octo-telegram') }}</h3>
+  <h3 class="uk-h5">{{ __('Sorting', 'shiny-octo-journey') }}</h3>
   <div class="uk-panel uk-panel-scrollable uk-margin-small-bottom">
     {% do action('woocommerce_before_shop_loop') %}
   </div>
 
-  <h3 class="uk-h5">{{ __('Filter by Category', 'vigilant-octo-telegram') }}</h3>
+  <h3 class="uk-h5">{{ __('Filter by Category', 'shiny-octo-journey') }}</h3>
   <div class="uk-panel uk-panel-scrollable uk-margin-small-bottom cat-list-panel">
     <ul class="uk-nav uk-nav-default uk-margin-small-bottom cat-list">
 
@@ -70,9 +70,9 @@
       
     </ul>
   </div>
-  <a class="uk-link-text uk-text-primary uk-text-small filters-reset-link" data-link="{{ function ('remove_query_arg_product_cats_for_filters')|e('esc_url') }}">{{ __('Reset', 'vigilant-octo-telegram') }}</a>
+  <a class="uk-link-text uk-text-primary uk-text-small filters-reset-link" data-link="{{ function ('remove_query_arg_product_cats_for_filters')|e('esc_url') }}">{{ __('Reset', 'shiny-octo-journey') }}</a>
 
-  <h3 class="uk-h5">{{ __('Filter by Series', 'vigilant-octo-telegram') }}</h3>
+  <h3 class="uk-h5">{{ __('Filter by Series', 'shiny-octo-journey') }}</h3>
   <div class="uk-panel uk-panel-scrollable uk-margin-small-bottom series-list-panel">
     <ul class="uk-nav uk-nav-default uk-margin-small-bottom series-list">
       {% for cat in function('product_series_for_filters') %}
@@ -134,6 +134,6 @@
       {% endif %}
     </ul>
   </div>
-  <a class="uk-link-text uk-text-primary uk-text-small filters-reset-link" data-link="{{ function ('remove_query_arg_product_series_for_filters')|e('esc_url') }}">{{ __('Reset', 'vigilant-octo-telegram') }}</a>
+  <a class="uk-link-text uk-text-primary uk-text-small filters-reset-link" data-link="{{ function ('remove_query_arg_product_series_for_filters')|e('esc_url') }}">{{ __('Reset', 'shiny-octo-journey') }}</a>
 
 </nav>

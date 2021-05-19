@@ -2,7 +2,7 @@
 /**
  * Theme functions & bits
  *
- * @package Vigilant_Octo_Telegram
+ * @package Shiny_Octo_Journey
  */
  
 // check if is blog or post
