@@ -20,8 +20,8 @@
   margin-right: auto;
   width: 70px;
   height: 70px;
-  border: 2px solid #14191c;
-  border-top: 3px solid #ee3131;
+  border: 2px solid #224356;
+  border-top: 3px solid #4caf50;
   border-radius: 100%;
   will-change: transform;
   animation: spin 1s infinite linear;
@@ -92,7 +92,6 @@
   text-decoration: underline!important;
 }
 #ProductFilters .uk-nav-default a {
-  font-size: .9rem;
   font-weight: 600;
 }
 #ProductFilters .uk-panel-scrollable::-webkit-scrollbar {
@@ -100,7 +99,7 @@
 }
 #ProductFilters .uk-panel-scrollable::-webkit-scrollbar-thumb {
   border-radius: 0;
-  background-color: #EE3131;
+  background-color: #4caf50;
 }
 #ProductFilters .uk-panel-scrollable::-webkit-scrollbar-track {
   background-color: #f8f8f8;
@@ -117,7 +116,7 @@
     padding: 0 10px;
     font-weight: 600;
     vertical-align: middle;
-    background: #EE3131;
+    background: #4caf50;
     color: #fff;
     font-size: .75rem;
     display: inline-flex;
@@ -155,5 +154,5 @@
 }
 
 .uk-button-primary {
-    background-color: #ee3131;
+    background-color: #4caf50;
 }

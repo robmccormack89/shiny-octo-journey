@@ -19,7 +19,7 @@ ins {
 bdi {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ee3131;
+  color: #4caf50;
 }
 
 /* turn offs */
@@ -35,7 +35,7 @@ bdi {
   line-height: 28px;
 }
 .woocommerce-mini-cart__total bdi {
-  color: #ee3131;
+  color: #4caf50;
 }
 .woocommerce-mini-cart__empty-message {
   padding: 20px;

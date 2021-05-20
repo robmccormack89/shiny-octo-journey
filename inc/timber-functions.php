@@ -61,7 +61,7 @@ class Shiny_Octo_Journey extends Timber\Site
   public function register_post_types()
   {
     $labels_one = array(
-  		'name'                  => _x( 'Banner Slides', 'Post Type General Name', 'shiny-octo-journey' ),
+      'name'                  => _x( 'Banner Slides', 'Post Type General Name', 'shiny-octo-journey' ),
   		'singular_name'         => _x( 'Banner Slide', 'Post Type Singular Name', 'shiny-octo-journey' ),
   		'menu_name'             => __( 'Home Banner Slides', 'shiny-octo-journey' ),
   		'name_admin_bar'        => __( 'Banner Slide', 'shiny-octo-journey' ),
@@ -310,11 +310,11 @@ class Shiny_Octo_Journey extends Timber\Site
       true
     );
     
-    wp_enqueue_style(
-      'theme-google-fonts',
-      'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap',
-      false
-    );
+    // wp_enqueue_style(
+    //   'theme-google-fonts',
+    //   'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap',
+    //   false
+    // );
     
     // font awesome
     wp_enqueue_style(

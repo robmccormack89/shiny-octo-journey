@@ -1,6 +1,6 @@
 {{ fn('timber_set_product', post) }}
 
-<div id="ProductItem{{ post.id|e('html_attr') }}" class="entry item grid-item product-grid-item {{ post.class|e('html_attr') }}" data-product-id="{{ post.id|e('html_attr') }}">
+<div id="ProductItem{{ post.id|e('html_attr') }}" class="entry item grid-item product-grid-item uk-inline {{ post.class|e('html_attr') }}" data-product-id="{{ post.id|e('html_attr') }}">
   
   {% do action('woocommerce_before_shop_loop_item') %}
   

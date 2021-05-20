@@ -4,28 +4,21 @@
       <div id="ShopToolbarLeft" class="uk-navbar-left pull-left-15">
         {% if (fn('current_product_orderby_var')) %}
           <div class="uk-navbar-item min-height-40">
-            <a class="uk-badge badge-sort icon close-icon" data-link="{{ fn('remove_query_arg', ['orderby'])|e('esc_url') }}" onclick="quickLoad(event);">
+            <a class="uk-badge badge-sort icon close-icon" data-link="{{ fn('remove_query_arg', ['orderby'])|e('esc_url') }}">
               {{ fn('orderby_badge_name') }}
             </a>
           </div>
         {% endif %}
         {% if fn('current_product_cat_var') or fn('is_product_category') %}
           <div class="uk-navbar-item min-height-40">
-            <a class="uk-badge badge-cat icon close-icon" data-link="{{ fn('remove_query_arg_product_cats_for_filters')|e('esc_url') }}" onclick="quickLoad(event);">
+            <a class="uk-badge badge-cat icon close-icon" data-link="{{ fn('remove_query_arg_product_cats_for_filters')|e('esc_url') }}">
               {{ fn('get_term_by', 'slug', fn('get_query_var', 'product_cat'), 'product_cat').name }}
-            </a>
-          </div>
-        {% endif %}
-        {% if fn('current_product_series_var') or fn('is_product_series') %}
-          <div class="uk-navbar-item min-height-40">
-            <a class="uk-badge badge-series icon close-icon" data-link="{{ fn('remove_query_arg_product_series_for_filters')|e('esc_url') }}" onclick="quickLoad(event);">
-              {{ fn('get_term_by', 'slug', fn('get_query_var', 'product_series'), 'product_series').name }}
             </a>
           </div>
         {% endif %}
         {% if fn('current_product_gridlist_var') %}
         <div class="uk-navbar-item min-height-40">
-          <a class="uk-badge badge-view icon close-icon" data-link="{{ fn('remove_query_arg', ['grid_list'])|e('esc_url') }}" onclick="quickLoad(event);">
+          <a class="uk-badge badge-view icon close-icon" data-link="{{ fn('remove_query_arg', ['grid_list'])|e('esc_url') }}">
             {{ fn('gridlist_badge_name') }}
           </a>
         </div>

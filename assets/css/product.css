@@ -41,7 +41,7 @@
 .product-right bdi {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ee3131;
+  color: #4caf50;
 }
 /* product meta */
 .product_meta {
@@ -92,7 +92,7 @@ span.tagged_as {
   height: 100%;
 }
 :root {
-  --swiper-theme-color: #ee3131ba;
+  --swiper-theme-color: #4caf50ba;
 }
 #slideshow_related, #slideshow_upsells {
   margin-bottom: -25px;
