@@ -3,8 +3,8 @@
     <div class="uk-child-width-1-4 uk-grid-small" uk-grid>
       <div class="uk-text-center">
         <a class="uk-link-text" href="{{shop_url|e('esc_url')}}">
-          <i class="fas fa-tractor fa-lg"></i>
-          <div class="uk-text-small">{{ __('Parts', 'shiny-octo-journey') }}</div>
+          <i class="fas fa-seedling fa-lg"></i>
+          <div class="uk-text-small">{{ __('Shop', 'shiny-octo-journey') }}</div>
         </a>
       </div>
       <div class="uk-text-center">
@@ -17,7 +17,7 @@
         <a class="uk-link-text" href="{{dashboard_endpoint|e('esc_url')}}">
             <i class="far fa-user fa-lg"></i>
           {% if not user %}
-            <div class="uk-text-small">{{ __('Login/Signup', 'shiny-octo-journey') }}</div>
+            <div class="uk-text-small">{{ __('Login', 'shiny-octo-journey') }}</div>
           {% else %}
             <div class="uk-text-small">{{ __('Account', 'shiny-octo-journey') }}</div>
           {% endif %}

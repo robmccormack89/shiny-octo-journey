@@ -8,8 +8,13 @@
 /* onsale badge - main product */
 .onsale.uk-card-badge {
   top: 15px;
-  left: 55px;
+  left: 15px;
   right: auto;
+}
+.product-left .onsale.uk-card-badge {
+    top: 15px;
+    left: 58px;
+    right: auto;
 }
 /* product left */
 /* product images */
@@ -41,7 +46,7 @@
 .product-right bdi {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #4caf50;
+  color: #4caf6a;
 }
 /* product meta */
 .product_meta {
@@ -92,7 +97,7 @@ span.tagged_as {
   height: 100%;
 }
 :root {
-  --swiper-theme-color: #4caf50ba;
+  --swiper-theme-color: #4caf6aba;
 }
 #slideshow_related, #slideshow_upsells {
   margin-bottom: -25px;

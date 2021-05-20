@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block archive_header_title %}
-  <h1 class="uk-text-uppercase uk-text-muted uk-article-title uk-margin-remove">{{ title|e('esc_html') }}</h1>
+  <h1 class="uk-text-muted uk-article-title uk-margin-remove">{{ title|e('esc_html') }}</h1>
   <div hidden>
     {% do action('woocommerce_archive_description') %}
   </div>

@@ -112,7 +112,7 @@ function ajax_live_search() {
                  </div>
                  <div clas="uk-width-auto">
                    <div class="uk-text-meta ajax-search-meta uk-text-right">
-                      ' . __( 'Part', 'urban-carnival-theme' ) . '
+                      ' . __( 'Product', 'urban-carnival-theme' ) . '
                    </div>
                  </div>
                </div>
@@ -134,7 +134,7 @@ function ajax_live_search() {
                  </div>
                  <div clas="uk-width-auto">
                    <div class="uk-text-meta ajax-search-meta uk-text-right">
-                    ' . __( 'Part', 'urban-carnival-theme' ) . '
+                    ' . __( 'Product', 'urban-carnival-theme' ) . '
                    </div>
                  </div>
                </div>
@@ -256,7 +256,7 @@ function ajax_live_search_mobile() {
                 </div>
                 <div clas="uk-width-auto">
                   <div class="uk-text-meta ajax-search-meta uk-text-right">
-                    ' . __( 'Part', 'urban-carnival-theme' ) . '
+                    ' . __( 'Product', 'urban-carnival-theme' ) . '
                   </div>
                 </div>
               </div>
@@ -278,7 +278,7 @@ function ajax_live_search_mobile() {
                 </div>
                 <div clas="uk-width-auto">
                   <div class="uk-text-meta ajax-search-meta uk-text-right">
-                    ' . __( 'Part', 'urban-carnival-theme' ) . '
+                    ' . __( 'Product', 'urban-carnival-theme' ) . '
                   </div>
                 </div>
               </div>

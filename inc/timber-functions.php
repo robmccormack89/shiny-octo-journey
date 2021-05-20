@@ -301,6 +301,17 @@ class Shiny_Octo_Journey extends Timber\Site
       false
     );
     
+    if (is_cart()) {
+      // theme base scripts
+        wp_enqueue_script(
+          'swipee',
+          get_template_directory_uri() . '/assets/js/lib/swiper-bundle.min.js',
+          '',
+          '',
+          true
+        );
+    }
+    
     // theme base scripts
     wp_enqueue_script(
       'theme-woo',
@@ -316,6 +327,13 @@ class Shiny_Octo_Journey extends Timber\Site
     //   false
     // );
     
+    if (is_cart()) {
+      // font awesome
+      wp_enqueue_style(
+        'swipee-theme',
+        get_template_directory_uri() . '/assets/css/lib/swiper-bundle.min.css'
+      );
+    }
     // font awesome
     wp_enqueue_style(
       'fontawesome-theme',

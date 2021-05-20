@@ -18,18 +18,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Shiny Octo Journey is built using Timber WP https://github.com/timber/timber
 */
 
+#TertiaryHeader.uk-sticky-below {
+  z-index: 2;
+}
+
 html {
-  font-family: 'Poppins', sans-serif;
   color: #1f2529;
-}
-.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge,
-h1, h2, h3, h4, h5, h6,
-.oswald, .uk-badge {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-.uk-navbar-item, .uk-navbar-nav>li>a, .uk-navbar-toggle {
-  font-family: 'Poppins', sans-serif;
 }
 
 /* fonts */
@@ -42,17 +36,17 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 600;
 }
 .uk-button-primary {
-  background-color: #4caf50;
+  background-color: #4caf6a;
 }
 .uk-button-primary:focus, .uk-button-primary:hover {
-  background-color: #3a863d;
+  background-color: #3b9255;
 }
 .uk-light .uk-button-primary {
-  background-color: #4caf50;
+  background-color: #4caf6a;
   color: #fff;
 }
 .uk-light .uk-button-primary:hover, .uk-light .uk-button-primary:hover {
-  background-color: #3a863d;
+  background-color: #3b9255;
   color: #fff;
 }
 .uk-button-link, .uk-button-link:hover, .uk-button-link:focus {
@@ -60,11 +54,11 @@ h1, h2, h3, h4, h5, h6,
 }
 /* links */
 .uk-link, a {
-  color: #4caf50;
+  color: #4caf6a;
   font-weight: 700;
 }
 .uk-link-toggle:focus .uk-link, .uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
-  color: #3a863d;
+  color: #3b9255;
 }
 .uk-link-heading a:hover, .uk-link-toggle:focus .uk-link-heading, .uk-link-toggle:hover .uk-link-heading, a.uk-link-heading:hover {
   color: #333333;
@@ -118,7 +112,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* background colours */
 .uk-background-secondary, .uk-section-secondary {
-  background-color: #224356;
+  background-color: #335365;
 }
 .uk-background-secondary.uk-background-secondary-muted {
   background-color: #191f23;
@@ -127,21 +121,21 @@ h1, h2, h3, h4, h5, h6,
   background-color: #1f2529;
 }
 .uk-checkbox:checked, .uk-checkbox:indeterminate, .uk-radio:checked {
-  background-color: #4caf50!important;
+  background-color: #4caf6a!important;
 }
 .uk-section-primary {
-  background: #4caf50;
+  background: #4caf6a;
 }
 .uk-label {
-  background: #4caf50;
+  background: #4caf6a;
 }
 
 /* border modifications */
 .uk-tab>.uk-active>a {
-  border-color: #4caf50;
+  border-color: #4caf6a;
 }
 .uk-input:focus, .uk-select:focus, .uk-textarea:focus {
-  border-color: #4caf50;
+  border-color: #4caf6a;
 }
 
 /* overlay modification */
@@ -178,10 +172,10 @@ h1, h2, h3, h4, h5, h6,
   padding-left: 20px;
 }
 #PrimaryHeader .uk-search-default .uk-search-input:focus {
-  border-color: #4caf50;
+  border-color: #4caf6a;
 }
 #PrimaryHeader .uk-navbar-nav a {
-  color: #1f2529;
+  color: #223844;
 }
 #PrimaryHeader .uk-navbar-nav li.uk-active>a, #PrimaryHeader .uk-navbar-nav li.current-menu-item>a {
   color: #6b6b6b;
@@ -202,7 +196,7 @@ h1, h2, h3, h4, h5, h6,
 .header-cart-count {
   display: inline-block;
   text-align: center;
-  background-color: #4caf50;
+  background-color: #4caf6a;
   color: #ffffff;
   font-size: 13px;
   min-width: 20px;
@@ -214,22 +208,21 @@ h1, h2, h3, h4, h5, h6,
   left: 38px;
 }
 #PrimaryHeader span.subtotal-cart .woocommerce-Price-amount {
-  color: #4caf50;
+  color: #4caf6a;
   margin-left: -5px;
 }
 /* header bottom */
 #TertiaryHeader .uk-navbar-item, #TertiaryHeader .uk-navbar-nav>li>a, #TertiaryHeader .uk-navbar-toggle {
-  min-height: 0px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  padding: 0 20px;
+    min-height: 0px;
+    font-size: 1.1rem;
+    padding: 0 20px;
 }
 #TertiaryHeader .uk-navbar-left .uk-navbar-nav>li>a {
   color: hsl(0deg 0% 100% / 98%);
   text-transform: revert;
 }
 #TertiaryHeader .uk-navbar-dropdown {
-  background: #224356;
+  background: #335365;
 }
 #TertiaryHeader .uk-navbar-dropdown-nav>li>a:focus, .uk-navbar-dropdown-nav>li>a:hover {
   color: #ffffff;
@@ -247,7 +240,7 @@ h1, h2, h3, h4, h5, h6,
   max-width: 500px;
 }
 #HeaderMobile .uk-offcanvas-bar .uk-nav-default>li.current-menu-item>a {
-  color: #ff0000;
+  color: #4caf6a;
 }
 #HeaderMobile .uk-offcanvas-bar .uk-nav>li>a {
   padding: 10px 10px;
@@ -271,12 +264,12 @@ h1, h2, h3, h4, h5, h6,
 }
 #HeaderMobile .uk-offcanvas-bar .uk-subnav-pill>*>:first-child {
   background-color: #f7f7f7;
-  border-bottom: 3px solid #;
+  border-bottom: 3px solid #e4e4e4;
 }
 #HeaderMobile .uk-offcanvas-bar .uk-subnav-pill>.uk-active>a {
   background-color: #ccc;
   color: #000;
-  border-bottom: 3px solid #ff0000;
+  border-bottom: 3px solid #4caf6a;
 }
 #response_search_results_mobile.search-results-ajax {
   position: relative;
@@ -295,7 +288,7 @@ h1, h2, h3, h4, h5, h6,
 }
 #response_search_results_mobile.search-results-ajax::-webkit-scrollbar-thumb {
   border-radius: 0;
-  background-color: #ff0000;
+  background-color: #4caf6a;
 }
 #response_search_results_mobile.search-results-ajax::-webkit-scrollbar-track {
   box-shadow: none;
@@ -336,7 +329,7 @@ h1, h2, h3, h4, h5, h6,
 }
 .search-results-ajax ul li a:hover {
   background-color: #f5f5f5;
-  color: #4caf50;
+  color: #4caf6a;
 }
 .search-results-ajax ul li a, .search-results-ajax ul li a:hover {
   text-decoration: none;
@@ -372,7 +365,7 @@ footer .uk-light .uk-nav-default>li>a {
   color: #fff;
 }
 footer .uk-light .uk-nav-default>li.uk-active>a, footer .uk-light .uk-nav-default>li.current-menu-item>a {
-  color: #979797;
+    color: #ffffff96;
 }
 
 /* inf scroll pagination */

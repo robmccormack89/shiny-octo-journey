@@ -8,10 +8,20 @@
     <div class="uk-container uk-container-expand">
       <div class="uk-flex uk-flex-middle" uk-grid>
         
-        <div class="uk-width-2-3 uk-width-medium@m">
-          <a href="{{ site.url|e('esc_url') }}" title="{{ site.title|e('html_attr') }}">
-            <img class="uk-logo" data-src="{{ theme_logo_url|resize(250)|e('esc_url')|default('https://via.placeholder.com/250x82.png?text=+') }}" width="250" height="82" alt="{{ site.title|e('esc_html') }} Logo" uk-img>
-          </a>
+        <div class="uk-width-1-1 uk-width-large@m">
+            {% if theme_logo_url %}
+              <a href="{{ site.url|e('esc_url') }}" title="{{ site.title|e('html_attr') }}">
+                <img class="uk-logo" data-src="{{ theme_logo_url|resize(250)|e('esc_url') }}" width="250" height="82" alt="{{ site.title|e('esc_html') }} Logo" uk-img>
+              </a>
+            {% else %}
+            <h2 class="uk-h2 uk-margin-remove text-logo">
+              <a class="text-logo-link" href="{{ site.url|e('esc_url') }}" title="{{ site.title|e('html_attr') }}">
+                <span style="color: #335365;">The</span> 
+                <span style="color: #4caf6a;font-size: 1.2em;">Polytunnel</span> 
+                <span style="color: #335365;">Factory</span>
+              </a>
+            </h2>
+            {% endif %}
         </div>
         
         <div class="uk-width-expand uk-visible@m">
@@ -21,7 +31,7 @@
           			<a href="#" title="{{ __('Submit Search', 'shiny-octo-journey') }}" class="uk-search-icon-flip uk-icon uk-search-icon">
           				<i class="fas fa-search fa-2x"></i>
           			</a>
-          			<input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search" value="" placeholder="{{ __('Start searching for parts...', 'shiny-octo-journey') }}" required="" autocomplete="off"
+          			<input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search" value="" placeholder="{{ __('Start searching for polytunnels...', 'shiny-octo-journey') }}" required="" autocomplete="off"
                   aria-invalid="true">
           			<input type="hidden" name="post_type" value="product" />
           		</div>
@@ -34,20 +44,20 @@
           <ul class="uk-navbar-nav">
             <li>
               <a href="{{shop_url|e('esc_url')}}">
-                <i class="fas fa-tractor fa-2x uk-margin-small-right"></i>
-                {{ __('Parts', 'shiny-octo-journey') }}
+                <i class="fas fa-seedling fa-2x uk-margin-small-right"></i>
+                {{ __('Shop', 'shiny-octo-journey') }}
               </a>
             </li>
             <li>
               <a href="{{contact_page_link|e('esc_url')|default('#')}}">
                 <i class="far fa-envelope fa-2x uk-margin-small-right"></i>
-                {{ __('Contact', 'shiny-octo-journey') }}
+                {{ __('Contact us', 'shiny-octo-journey') }}
               </a>
             </li>
             <li>
               <a href="{{dashboard_endpoint|e('esc_url')}}">
                 <i class="far fa-user fa-2x uk-margin-small-right"></i>
-                {% if is_user_logged_in %}{{ __('Account', 'shiny-octo-journey') }}{% else %}{{ __('Sign up/Login', 'shiny-octo-journey') }}{% endif %}
+                {% if is_user_logged_in %}{{ __('My Account', 'shiny-octo-journey') }}{% else %}{{ __('Sign up/Login', 'shiny-octo-journey') }}{% endif %}
               </a>
             </li>
             <li class="uk-inline">
@@ -243,7 +253,7 @@
               <a href="#" title="{{ __('Submit Search', 'shiny-octo-journey') }}" class="uk-search-icon-flip uk-icon uk-search-icon">
                 <i class="fas fa-search fa-lg"></i>
               </a>
-              <input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search_mobile" value="" placeholder="{{ __('Start searching for parts...', 'shiny-octo-journey') }}" required="" autocomplete="off"
+              <input class="form-control uk-search-input uk-input" type="text" name="s" maxlength="300" pattern=".*\S+.*" id="input_search_mobile" value="" placeholder="{{ __('Start searching...', 'shiny-octo-journey') }}" required="" autocomplete="off"
                 aria-invalid="true">
               <input type="hidden" name="post_type" value="product" />
             </div>

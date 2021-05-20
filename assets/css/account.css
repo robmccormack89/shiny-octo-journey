@@ -1,5 +1,5 @@
 /* subnav active is-actve class modification */
 .uk-subnav-pill>.uk-active>a, .uk-subnav-pill>.is-active>a {
-  background-color: #4caf50;
+  background-color: #4caf6a;
   color: #fff;
 }

@@ -122,6 +122,8 @@ function iconic_subtotal_fragments( $fragments ) {
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_subtotal_fragments', 10, 1 );
 
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
 // archive
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 ); // remove woo breads
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );

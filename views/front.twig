@@ -8,9 +8,9 @@
 
 {% block article %}
 
-<article id="post-{{post.id|e('html_attr')}}" class="uk-article {{post.class|e('html_attr')}}" data-template="front.twig">
+<article id="post-{{post.id|e('html_attr')}}" class="uk-article woocommerce {{post.class|e('html_attr')}}" data-template="front.twig">
   
-  <div id="slideshow_banner" class="swiper-container">
+  <div id="slideshow_banner" class="swiper-container" hidden>
     <div class="swiper-wrapper">
       
       {% for slide in home_slides %}
@@ -35,7 +35,7 @@
             <source media="(min-width: 480px) and (max-width: 767px)" srcset="https://picsum.photos/768/500?random=1">
             <source media="(min-width: 768px) and (max-width: 959px)" srcset="https://picsum.photos/960/650?random=1">
             <source media="(min-width: 960px) and (max-width: 1199px)" srcset="https://picsum.photos/1200/800?random=1">
-            <source media="(min-width: 1200px)" srcset="https://picsum.photos/1920/400?random=1">
+            <source media="(min-width: 1200px)" srcset="https://picsum.photos/1920/300?random=1">
             <img src="https://picsum.photos/1920/400?random=1" alt="Some alt...">
           </picture>
         </div>
@@ -47,19 +47,81 @@
     {% endif %}
   </div>
   
-  <div class="home-featured uk-section uk-section-small uk-container uk-container-large">
+  <!-- homepage banner section -->
+  <section class="home-hero uk-section bg-cover" style="background-image: url('/wp-content/themes/shiny-octo-journey/assets/images/banner.jpg');">
+    <div class="uk-container">
+      <div class="uk-width-2-3@m uk-light">
+        <div class="uk-overlay uk-overlay-primary">
+          <h1 class="uk-h1">{{ __('Welcome to The Polytunnel Factory', 'shiny-octo-journey')|e('esc_html') }}</h1>
+          <p class="uk-text-lead">{{ __('We specialize in domestic polytunnels for the home gardener; our goal is to get everyone to grow.', 'shiny-octo-journey')|e('esc_html') }}</p>
+          <a href="#Next" class="uk-button uk-button-primary uk-text-capitalize" uk-scroll="offset: 40">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="Next" class="uk-section uk-section-muted theme-border-bottom">
+    <div class="uk-container uk-container-small uk-text-center">
+      <h3>Why Buy From Us?</h3>
+      <!-- <p>Our team have years of experience in all the aspect of your polytunnel project. I have worked in the construction industry for years and for the last 7 years I've owned and operated an organic farm specializing in horticulture for the last 7 years . I have bought and erected many different tunnels and have learned how to improve on the features that gave me trouble over the years. That is why I'm confident in offering you a lifetime guarantee with the steel structure of our tunnels. A ten year guarantee with the timber structure and five year manufacturer's guarantee with the polythene.<br>
+      <br>
+      <span class="uk-text-bold">- Owner William Leonard</span> -->
+      <blockquote cite="#">
+          <p class="uk-margin-small-bottom">Our team have years of experience in all the aspect of your polytunnel project. I have worked in the construction industry for years and for the last 7 years I've owned and operated an organic farm specializing in horticulture for the last 7 years . I have bought and erected many different tunnels and have learned how to improve on the features that gave me trouble over the years. That is why I'm confident in offering you a lifetime guarantee with the steel structure of our tunnels. A ten year guarantee with the timber structure and five year manufacturer's guarantee with the polythene.</p>
+          <footer class="uk-padding-remove">Owner of The Polytunnel Factory <cite><a href="/">William Leonard</a></cite></footer>
+      </blockquote>
+      </p>
+    </div>
+  </section>
+  
+  <div class="home-featured uk-section uk-container uk-container-large">
     
-    <h2 class="uk-text-center uk-h2"><span>Featured Products</span></h2>
+    <h2 class="uk-text-center uk-h2"><span>Featured Polytunnels</span></h2>
     
     <hr class="uk-divider-small uk-text-center">
     
-    <div class="uk-grid-small uk-child-width-1-5@m" uk-grid>
+    <div class="uk-grid-small uk-child-width-1-4@m" uk-grid>
       {% for post in featured_products %}
         {% include 'tease-product.twig' %}
       {% endfor %}
     </div>
     
   </div>
+  
+  <section class="home-join bg-cover" style="background-image: url('/wp-content/themes/shiny-octo-journey/assets/images/field.jpg');">
+    <div class="uk-overlay uk-overlay-primary uk-light uk-text-center">
+      <div class="uk-section uk-section-small uk-container">
+        <h2 class="uk-h2">{{ __('6 Features as standard with all our tunnels', 'inshore-theme')|e('esc_html') }}</h2>
+        <hr class="uk-divider-small uk-text-center">
+        <div class="uk-child-width-1-3@s uk-text-center" uk-grid>
+            <div>
+              <h4>Crop Bars</h4>
+              <div class="">Crops Bars come as standard with all our tunnels. Crop bars are used for attaching string when tying up your crops like tomatoes etc. These are essential for your tunnel if you plan on growing vegetables.</div>
+            </div>
+            <div>
+              <h4>Doors at both ends</h4>
+              <div class="">We offer a single door at both ends of our all tunnels as standard. Not just green netting like some other suppliers. We know that it's important to have doors that can open & close at certain times of the year.</div>
+            </div>
+            <div>
+              <h4>Galvanised Steel</h4>
+              <div class="">All the steel used in the construction of our tunnels is high tensile steel that is galvanised internally & externally. That is why we offer lifetime guarantees with the steel structure of all our tunnels.</div>
+            </div>
+            <div>
+              <h4>Pressure Treated Timber</h4>
+              <div class="">All the timber we used in the construction of our tunnels is vacuum pressure treated with Tanalith. This gives it an effective & long lasting protection from the elements.</div>
+            </div>
+            <div>
+              <h4>Timber Base Rail</h4>
+              <div class="">A timber base rail is used to attach the polythene to the steel structure of your tunnel. This is a far superior method to burying the polythene in a trench.</div>
+            </div>
+            <div>
+              <h4>Anti-fog Polythene</h4>
+              <div class="">Thermal Anti Fog Polythene 720 gauge (180 micron).This film has added UV A & UV B filters which dramatically reduce many fungal diseases & condensation.</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
 </article>
 
