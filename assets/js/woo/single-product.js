@@ -13,7 +13,9 @@ jQuery(function($) {
   // tab heading
   $(".tab-content h2").addClass("uk-h4");
   
-  $("#ProductButtons .button").addClass("uk-button uk-button-small uk-button-primary");
+  $(".woocommerce-notices-wrapper").addClass("uk-container uk-margin-top");
+  $(".woocommerce-notices-wrapper .button").addClass("uk-button uk-button-primary uk-button-small uk-margin-small-right");
+
   $(".onsale").addClass("uk-card-badge uk-label");
 });
 
